@@ -1,0 +1,69 @@
+name: bic_ofic
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# Define the version and build number for your application.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  mysql1: ^0.20.0
+  cupertino_icons: ^1.0.2
+  font_awesome_flutter: ^9.1.0
+  fluttertoast: ^8.2.2
+  firebase_core: ^2.20.0
+  http: ^0.13.6
+  dio: ^5.3.3
+  firebase_auth: ^4.12.0
+  table_calendar: ^3.0.9
+  
+
+ 
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Define your asset files here.
+  assets:
+    - assets/images/Mulher_oculos.jpg
+    - assets/images/tela inicial.png
+    - assets/images/tela inicial2.png
+    - assets/images/tela_de_ex.png
+    - assets/images/tela_de_ex2.png
+    - assets/images/tela_de_ex3.png
+    - assets/images/tela_de_ex4.png
+    - assets/images/tela_de_ex5.png
+    - assets/images/tela_de_ex6.png
+    - assets/images/tela_de_ex7.png
+    - assets/images/tela_final_de_ex.png
+    - assets/images/olho_dominante1.png
+    - assets/images/olho_dominante2.png
+    - assets/images/relaxamento1.png
+    - assets/images/relaxamento2.png
+    - assets/images/relaxamento3.png
+    - assets/images/relaxamento4.png
+    - assets/images/relaxamento5.png
+    - assets/images/relaxamento6.png
+    - assets/images/relaxamento7.png
+    - assets/images/relaxamento8.png
+    - assets/images/relaxamento9.png
+
+
+  fonts:
+    - family: Aerial
+      fonts:
+        
+        - asset: assets/fonts/Chewy-Regular.ttf
+        
