@@ -10,7 +10,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Login"), backgroundColor: Color(0xFFEDBEA4)),
+      appBar: AppBar(title: Text("Login"), backgroundColor: Color(0xFF00BCD4)),
       body: LoginForm(),
     );
   }
@@ -131,7 +131,7 @@ class _LoginFormState extends State<LoginForm> {
                 ElevatedButton(
                   onPressed: _submitForm,
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xFFEDBEA4),
+                    primary: Color(0xFF00BCD4),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),

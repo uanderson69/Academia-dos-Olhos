@@ -1,3 +1,4 @@
+import 'package:bic_ofic/pages/tela_inicial2.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -37,8 +38,7 @@ class _ExercicioPageState extends State<ExercicioPage> {
       setState(() {
         _backgroundImageIndex = 0; // Reinicie para a primeira imagem
       });
-      Navigator.of(context).pushReplacementNamed(
-          '/tela-inicial2'); // Redirecione para a página inicial 2
+      Navigator.of(context).pushReplacementNamed(TelaInicial2.routeName);
     }
   }
 
@@ -53,7 +53,7 @@ class _ExercicioPageState extends State<ExercicioPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Exercício"),
-        backgroundColor: Color(0xFFEDBEA4),
+        backgroundColor: Color(0xFFA4C2F4),
         leading: IconButton(
           icon: Icon(FontAwesomeIcons.arrowLeft),
           onPressed: () {

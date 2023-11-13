@@ -1,6 +1,8 @@
+import 'package:bic_ofic/pages/editar_perfil.dart';
 import 'package:bic_ofic/pages/exercicio_page.dart';
 import 'package:bic_ofic/pages/exercicios_relaxamento.dart';
 import 'package:bic_ofic/pages/olho_dominante_page.dart';
+import 'package:bic_ofic/pages/rotinas.dart';
 import 'package:bic_ofic/pages/tela_inicial2.dart';
 import 'package:flutter/material.dart';
 import 'package:bic_ofic/pages/cadastro_page.dart';
@@ -32,6 +34,8 @@ class ExerciciosApp extends StatelessWidget {
             ExerciciosRelaxamentoPage(),
         OlhoDominantePage.routeName: (context) => OlhoDominantePage(),
         TelaInicial2.routeName: (ctx) => TelaInicial2(),
+        RotinasPage.routeName: (cxt) => RotinasPage(),
+        EditarPerfilPage.routeName: (cxt) => EditarPerfilPage(userId: 29),
       },
     );
   }
@@ -68,7 +72,7 @@ class HomePage extends StatelessWidget {
                       Navigator.pushNamed(context, CadastroPage.routeName);
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Color(0xFF9AD0D3),
+                      primary: Color(0xFFFF4081),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -86,7 +90,7 @@ class HomePage extends StatelessWidget {
                       Navigator.pushNamed(context, LoginPage.routeName);
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Color(0xFF9AD0D3),
+                      primary: Color(0xFF00BCD4),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),

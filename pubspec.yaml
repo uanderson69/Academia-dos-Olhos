@@ -18,11 +18,13 @@ dependencies:
   cupertino_icons: ^1.0.2
   font_awesome_flutter: ^9.1.0
   fluttertoast: ^8.2.2
-  firebase_core: ^2.20.0
+  firebase_core: ^2.22.0
   http: ^0.13.6
   dio: ^5.3.3
-  firebase_auth: ^4.12.0
+  firebase_auth: ^4.13.0
   table_calendar: ^3.0.9
+  fl_chart: ^0.62.0
+  flutter_local_notifications: ^16.1.0
   
 
  
@@ -31,6 +33,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  
 
 flutter:
   uses-material-design: true
@@ -59,7 +62,8 @@ flutter:
     - assets/images/relaxamento7.png
     - assets/images/relaxamento8.png
     - assets/images/relaxamento9.png
-
+    - assets/images/telinha.jpg
+    
 
   fonts:
     - family: Aerial

@@ -1,3 +1,4 @@
+import 'package:bic_ofic/pages/tela_inicial2.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -40,7 +41,7 @@ class _ExerciciosRelaxamentoPageState extends State<ExerciciosRelaxamentoPage> {
         _backgroundImageIndex = 0; // Reinicie para a primeira imagem
       });
       Navigator.of(context).pushReplacementNamed(
-          '/tela-inicial2'); // Redirecione para a página inicial 2
+          TelaInicial2.routeName); // Redirecione para a página inicial 2
     }
   }
 
@@ -55,7 +56,7 @@ class _ExerciciosRelaxamentoPageState extends State<ExerciciosRelaxamentoPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Relaxamento"),
-        backgroundColor: Color(0xFFEDBEA4),
+        backgroundColor: Color(0xFFA2E4D6),
         leading: IconButton(
           icon: Icon(FontAwesomeIcons.arrowLeft),
           onPressed: () {

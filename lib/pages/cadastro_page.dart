@@ -13,7 +13,7 @@ class CadastroPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Cadastro"),
-        backgroundColor: Color(0xFFEDBEA4),
+        backgroundColor: Color(0xFFFF4081),
       ),
       body: CadastroForm(),
     );
@@ -228,7 +228,7 @@ class _CadastroFormState extends State<CadastroForm> {
                 ElevatedButton(
                   onPressed: _submitForm,
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xFFEDBEA4),
+                    primary: Color(0xFFFF4081),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
