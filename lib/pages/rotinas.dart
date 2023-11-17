@@ -147,6 +147,7 @@ class _RotinasPageState extends State<RotinasPage> {
                     ),
                   ),
                 ),
+                SizedBox(height: 10),
                 ElevatedButton(
                   onPressed: () {
                     final hourDay = _hourDayController.text;

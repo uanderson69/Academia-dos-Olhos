@@ -1,4 +1,5 @@
-import 'package:bic_ofic/pages/tela_inicial2.dart';
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -23,6 +24,9 @@ class _ExercicioPageState extends State<ExercicioPage> {
     'assets/images/tela_final_de_ex.png',
   ];
 
+  Timer? _timer;
+  int _secondsRemaining = 60;
+
   @override
   void initState() {
     super.initState();
@@ -33,23 +37,50 @@ class _ExercicioPageState extends State<ExercicioPage> {
     if (_backgroundImageIndex < _backgroundImages.length - 1) {
       setState(() {
         _backgroundImageIndex++;
+        _resetTimer();
       });
     } else {
       setState(() {
         _backgroundImageIndex = 0; // Reinicie para a primeira imagem
       });
-      Navigator.of(context).pushReplacementNamed(TelaInicial2.routeName);
+      Navigator.of(context).pushReplacementNamed('/');
     }
   }
 
   void _startExercicios() {
-    setState(() {
-      _backgroundImageIndex = 0;
+    _startTimer();
+  }
+
+  void _startTimer() {
+    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
+      if (_secondsRemaining > 0) {
+        setState(() {
+          _secondsRemaining--;
+        });
+      } else {
+        _proximoExercicio();
+      }
     });
+  }
+
+  void _resetTimer() {
+    _timer?.cancel();
+    setState(() {
+      _secondsRemaining = 60;
+    });
+    _startTimer();
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Exercício"),
@@ -68,6 +99,30 @@ class _ExercicioPageState extends State<ExercicioPage> {
               image: DecorationImage(
                 image: AssetImage(_backgroundImages[_backgroundImageIndex]),
                 fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          Positioned(
+            top: 435,
+            right: 10,
+            child: Container(
+              width: 50,
+              height: 50,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.transparent,
+                border:
+                    Border.all(color: Color.fromARGB(255, 0, 0, 0), width: 2),
+              ),
+              child: Center(
+                child: Text(
+                  '$_secondsRemaining',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 0, 0, 0),
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
             ),
           ),
