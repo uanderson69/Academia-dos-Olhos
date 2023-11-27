@@ -50,7 +50,8 @@ class _CadastroFormState extends State<CadastroForm> {
       };
 
       final response = await http.post(
-        Uri.parse('http://localhost/api/cadastro.php'), // Atualize a URL da API
+        Uri.parse(
+            'http://localhost/bic_ofic/api/cadastro.php'), // Atualize a URL da API
         headers: {"Content-Type": "application/json"},
         body: jsonEncode(data),
       );

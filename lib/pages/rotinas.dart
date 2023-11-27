@@ -70,7 +70,7 @@ class _RotinasPageState extends State<RotinasPage> {
 
   Future<void> _saveHorarios(String hourDay, String hourNight) async {
     final response = await http.post(
-      Uri.parse('http://localhost/api/rotinas.php'),
+      Uri.parse('http://200.128.141.124/bic_ofic/api/rotinas.php'),
       body: {
         'hourDay': hourDay,
         'hourNight': hourNight,

@@ -64,7 +64,7 @@ class HomePage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(height: 270),
+                SizedBox(height: 300),
                 // Verifique se o usuário está logado antes de exibir os botões
                 if (!isUserLoggedIn)
                   ElevatedButton(

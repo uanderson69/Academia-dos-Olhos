@@ -37,7 +37,8 @@ class _LoginFormState extends State<LoginForm> {
       };
 
       final response = await http.post(
-        Uri.parse('http://localhost/api/login.php'), // Atualize a URL da API
+        Uri.parse(
+            'http://localhost/bic_ofic/api/login.php'), // Atualize a URL da API
         headers: {"Content-Type": "application/json"},
         body: jsonEncode(data),
       );

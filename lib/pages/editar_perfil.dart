@@ -117,7 +117,7 @@ class _EditarPerfilFormState extends State<EditarPerfilForm> {
 
       final response = await http.post(
         Uri.parse(
-            'http://localhost/api/atualizar_perfil.php'), // Atualize a URL da API
+            'http://200.128.141.124/bic_ofic/api/atualizar_perfil.php'), // Atualize a URL da API
         headers: {"Content-Type": "application/json"},
         body: jsonEncode(data),
       );
